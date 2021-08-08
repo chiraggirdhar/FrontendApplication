@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Login } from "./login/login";
+import {
+  useHistory,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { Dashboard } from "./dashboard/index";
+import { FrogetPassword } from "./login/forgetPassword";
+import { EmailVerification } from "./login/emailVerification";
+import { NewPassword } from "./login/newPassword";
+import { useEffect, useState } from "react";
+import { PrivateRoute } from "./utils/PrivateRoute";
 
 function App() {
+  const history = useHistory();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleUserAuthentication = (authentication) => {
+    setIsAuthenticated(authentication);
+  };
+
+  useEffect(() => {
+    if (window.location.pathname === "/") {
+      history.push("/login");
+    }
+  }, [history]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Switch>
+        <Route exact path="/new-password">
+          <NewPassword />
+        </Route>
+        <Route exact path="/email-verification">
+          <EmailVerification />
+        </Route>
+        <Route exact path="/forgot-password">
+          <FrogetPassword />
+        </Route>
+        <PrivateRoute
+          authed={isAuthenticated}
+          path="/dashboard"
+          component={Dashboard}
+        />
+        <Route path="/login">
+          <Login setAuthentication={handleUserAuthentication} />{" "}
+        </Route>
+      </Switch>
   );
 }
 

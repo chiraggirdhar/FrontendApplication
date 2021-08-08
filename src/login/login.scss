@@ -1,0 +1,171 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.login-container {
+    width: 414px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-icon {
+    width: 172px;
+    height: 28px;
+    margin-bottom: 38px;
+}
+
+.login-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 27px;
+    color: #0A0A0A;
+    margin: 0 0 88px 0;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-row {
+    margin-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.center-row {
+    align-items: center;
+}
+
+.text-danger {
+    position: absolute;
+    bottom: -25px;
+    color: red;
+}
+
+.label {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #B7B7B7;
+    margin-bottom: 8px;
+}
+
+.email-icon {
+    width: 24px;
+    height: 19.2px;
+    position: absolute;
+    bottom: 8px;
+}
+
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #16110D;
+    height: 30px;
+    padding-left: 40px;
+    color: #B7B7B7;
+}
+
+
+input::placeholder {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.85);
+    opacity: 0.2;
+}
+
+.forgot-password {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    margin: 0 0 122px 0;
+}
+
+.forgot-password-link {
+    color: #0A0A0A;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.submit-button {
+    background: #3B286D;
+    color: #FFFFFF;
+    width: 287px;
+    height: 53px;
+    margin-bottom: 22.5px;
+    border-radius: 4px;
+}
+
+.sign-up-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #707070;
+    margin: 0;
+    text-align: center;
+}
+
+.dashboard-text {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+        text-align: center;
+    }
+
+    button {
+        width: 80%;
+        max-width: 287px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .login-container {
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .login-text {
+        margin: 0 0 24px 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .login-wrapper {
+        height: 100vh;
+    }
+}

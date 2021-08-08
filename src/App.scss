@@ -1,0 +1,64 @@
+.title-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: bold;
+  color: #0A0A0A;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sub-title-text {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B7B7B7;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.sub-title-margin {
+  margin: 0 !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sub-title-text {
+    width: 85%;
+  }
+
+  .title-text {
+    width: 90%;
+  }
+}
+
+.email-forget-password {
+  margin-bottom: 72px !important;
+}
+
+.otp-input {
+  input {
+    padding: 5px;
+    width: 40px !important;
+    margin-right: 8px;
+  }
+}
+
+.resent-code-text {
+  font-weight: bold;
+  font-size: 16px;
+  color: purple;
+  margin-bottom: 122px;
+  cursor: pointer;
+}
+
+.new-password-text {
+  margin-bottom: 80px;
+}
+
+.forget-password-container {
+  margin-bottom: 122px;
+}
